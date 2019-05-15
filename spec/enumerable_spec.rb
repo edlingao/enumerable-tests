@@ -77,4 +77,16 @@ RSpec.describe Enumerable do
 
     end
 
+    describe "#my_count" do
+        it "Returns the number of elements on an array" do
+            number = my_array.my_count
+            expect(number).to eql(5)
+        end
+    end
+
+    describe "#my_inject" do
+        it "Returns the sum of all the receiver's elements." do
+          expect([100, 200, 300].my_inject { |sum, n| sum + n }).to eql(600)
+        end
+    end
 end
