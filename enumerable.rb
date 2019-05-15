@@ -97,7 +97,7 @@ module Enumerable
         arr = []
         if block_given? 
             self.my_each_with_i{|value,index|
-                arr[index] = yield(value)
+                arr[index] = value if yield(value)
             }
         else
             self.my_each{|value| value}
